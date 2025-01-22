@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MenulisActivity">
+
+    <data>
+
+        <variable
+            name="mainActivity3"
+            type="com.example.capstoneproject.activity.MenulisActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background1">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_back"
+            android:contentDescription="@string/icon_back_content"
+            android:onClick="@{() -> mainActivity3.btnBack()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivHanacaraka"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/hanacaraka_image"
+            android:src="@drawable/daftar_ba"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llTools"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/tools_background"
+            android:backgroundTint="@color/blue_eight"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/drawingView"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="@+id/drawingView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/btnBrush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_paintbrush"
+                    android:contentDescription="@string/icon_brush_content"
+                    android:onClick="@{() -> mainActivity3.btnBrush()}"
+                    app:layout_constraintBottom_toTopOf="@id/btnClear"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btn_polygon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_polygon"
+                    android:contentDescription="@string/icon_polygon_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnBrush"
+                    app:layout_constraintStart_toEndOf="@+id/btnBrush" />
+
+                <ImageView
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_cancel"
+                    android:contentDescription="@string/icon_clear_content"
+                    android:onClick="@{() -> mainActivity3.btnClear()}"
+                    app:layout_constraintBottom_toTopOf="@id/btnUndo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnBrush" />
+
+                <ImageView
+                    android:id="@+id/btnUndo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_undo"
+                    android:contentDescription="@string/icon_undo_content"
+                    android:onClick="@{() -> mainActivity3.btnUndo()}"
+                    app:layout_constraintBottom_toTopOf="@+id/btnRedo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnClear" />
+
+                <ImageView
+                    android:id="@+id/btnRedo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_redo"
+                    android:contentDescription="@string/icon_redo_content"
+                    android:onClick="@{() -> mainActivity3.btnRedo()}"
+                    app:layout_constraintBottom_toTopOf="@+id/btnColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnUndo" />
+
+                <ImageView
+                    android:id="@+id/btnColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_color_palette"
+                    android:contentDescription="@string/icon_pallete_content"
+                    android:onClick="@{() -> mainActivity3.btnColor()}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRedo" />
+
+                <ImageView
+                    android:id="@+id/btn_polygon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_polygon"
+                    android:contentDescription="@string/icon_polygon_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnColor"
+                    app:layout_constraintStart_toEndOf="@+id/btnColor" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <com.example.capstoneproject.util.DrawingView
+            android:id="@+id/drawingView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/drawingview_stroke"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnCekAksara"
+            app:layout_constraintStart_toEndOf="@id/llTools"
+            app:layout_constraintTop_toBottomOf="@+id/ivHanacaraka" />
+
+        <Button
+            android:id="@+id/btnCekAksara"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/btn_menu_round"
+            android:elevation="20dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:onClick="@{() -> mainActivity3.btnCekAksara()}"
+            android:text="@string/cek_aksara"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/drawingView"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/drawingView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/drawingView" />
+
+        <TextView
+            android:id="@+id/tvTingkatKemiripan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tingkat_kemiripan"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/nilaiPersentase"
+            app:layout_constraintStart_toStartOf="@+id/btnCekAksara" />
+
+        <TextView
+            android:id="@+id/nilaiPersentase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:text=""
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/btnCekAksara"
+            app:layout_constraintEnd_toEndOf="@id/tvTingkatKemiripan"
+            app:layout_constraintStart_toStartOf="@+id/tvTingkatKemiripan" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

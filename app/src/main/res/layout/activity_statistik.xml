@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".statistikActivity">
+
+    <data>
+
+        <variable
+            name="statistikActivity"
+            type="com.example.capstoneproject.activity.StatistikActivity" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/icon_back_content"
+                android:onClick="@{() -> statistikActivity.btnBack()}"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+            <TextView
+                android:id="@+id/tvStatusDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStatus" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clGrafik"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/item_image_image_round"
+                app:layout_constraintTop_toBottomOf="@id/tvStatusDetails">
+
+                <TextView
+                    android:id="@+id/tvGrafikPerkembangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/perkembangan_latihan"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/tvHurufBenar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/huruf_benar"
+                    android:src="@drawable/vertical_text"
+                    app:layout_constraintBottom_toBottomOf="@+id/chart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/chart" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvHurufBenar"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGrafikPerkembangan" />
+
+                <TextView
+                    android:id="@+id/tvTanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="@string/tanggal"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/chart"
+                    app:layout_constraintStart_toEndOf="@+id/tvHurufBenar"
+                    app:layout_constraintTop_toBottomOf="@id/chart" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvDataKuis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/data_kuis"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clGrafik" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:contentDescription="@string/icon_forward"
+                android:onClick="@{() -> statistikActivity.kuisClick()}"
+                android:rotation="180"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/tv_kuis"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_kuis" />
+
+            <TextView
+                android:id="@+id/tv_kuis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/kuis_tertinggi"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow"
+                app:layout_constraintTop_toBottomOf="@+id/tvDataKuis" />
+
+            <LinearLayout
+                android:id="@+id/llKuis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_kuis"
+                app:layout_constraintTop_toBottomOf="@id/tv_kuis">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/test_1"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/test_2"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/test_3"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/test_4"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/test_5"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/test_6"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDataLatihan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/data_latihan"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llKuis" />
+
+            <ImageView
+                android:id="@+id/iv_arrow1"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:contentDescription="@string/icon_forward"
+                android:onClick="@{() -> statistikActivity.pengangge1Click()}"
+                android:rotation="180"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pengange1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_pengange1" />
+
+            <TextView
+                android:id="@+id/tv_pengange1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/tanpa_pengangge"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow1"
+                app:layout_constraintTop_toBottomOf="@+id/tvDataLatihan" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPengangge1"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_pengange1"
+                app:layout_constraintTop_toBottomOf="@id/tv_pengange1" />
+
+            <ImageView
+                android:id="@+id/iv_arrow2"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:contentDescription="@string/icon_forward"
+                android:onClick="@{() -> statistikActivity.pengangge2Click()}"
+                android:rotation="180"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pengange2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_pengange2" />
+
+            <TextView
+                android:id="@+id/tv_pengange2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pengangge_ulu"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow2"
+                app:layout_constraintTop_toBottomOf="@+id/rvPengangge1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPengangge2"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_pengange2"
+                app:layout_constraintTop_toBottomOf="@id/tv_pengange2" />
+
+            <ImageView
+                android:id="@+id/iv_arrow3"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:contentDescription="@string/icon_forward"
+                android:onClick="@{() -> statistikActivity.pengangge3Click()}"
+                android:rotation="180"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pengange3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_pengange3" />
+
+            <TextView
+                android:id="@+id/tv_pengange3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pengangge_suku"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow3"
+                app:layout_constraintTop_toBottomOf="@+id/rvPengangge2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPengangge3"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_pengange3"
+                app:layout_constraintTop_toBottomOf="@id/tv_pengange3" />
+
+            <ImageView
+                android:id="@+id/iv_arrow4"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:contentDescription="@string/icon_forward"
+                android:onClick="@{() -> statistikActivity.pengangge4Click()}"
+                android:rotation="180"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pengange4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_pengange4" />
+
+            <TextView
+                android:id="@+id/tv_pengange4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pengangge_taleng"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow4"
+                app:layout_constraintTop_toBottomOf="@+id/rvPengangge3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPengangge4"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_pengange4"
+                app:layout_constraintTop_toBottomOf="@id/tv_pengange4" />
+
+            <ImageView
+                android:id="@+id/iv_arrow5"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:contentDescription="@string/icon_forward"
+                android:onClick="@{() -> statistikActivity.pengangge5Click()}"
+                android:rotation="180"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pengange5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_pengange5" />
+
+            <TextView
+                android:id="@+id/tv_pengange5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pengangge_taleng_tedong"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow5"
+                app:layout_constraintTop_toBottomOf="@+id/rvPengangge4" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPengangge5"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_pengange5"
+                app:layout_constraintTop_toBottomOf="@id/tv_pengange5" />
+
+            <ImageView
+                android:id="@+id/iv_arrow6"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:contentDescription="@string/icon_forward"
+                android:onClick="@{() -> statistikActivity.pengangge6Click()}"
+                android:rotation="180"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@id/tv_pengange6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_pengange6" />
+
+            <TextView
+                android:id="@+id/tv_pengange6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pengangge_pepet"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/iv_arrow6"
+                app:layout_constraintTop_toBottomOf="@+id/rvPengangge5" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPengangge6"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tv_pengange6"
+                app:layout_constraintTop_toBottomOf="@id/tv_pengange6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

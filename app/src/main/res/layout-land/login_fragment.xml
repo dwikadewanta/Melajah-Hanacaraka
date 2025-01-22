@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginFragment">
+
+    <data>
+
+        <variable
+            name="loginFragment"
+            type="com.example.capstoneproject.fragment.LoginFragment" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background1"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/robotoslab_extrabold"
+                android:text="@string/tv_title"
+                android:textColor="@color/white"
+                android:textSize="27sp" />
+
+            <TextView
+                android:id="@+id/tvUsernameOrEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/tv_username_or_email"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/ic_username"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/tv_password"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableEnd="@drawable/ic_eye"
+                android:elevation="10dp"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@id/tvPassword"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                tools:layout_editor_absoluteX="30dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvPasswordRule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/tv_password_rule"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    tools:ignore="InefficientWeight" />
+
+                <TextView
+                    android:id="@+id/tvLupaPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:onClick="@{ () -> loginFragment.toLupaPassword()}"
+                    android:text="@string/tv_lupa_password"
+                    android:textColor="@color/cyan_color"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/btn_round"
+                    android:backgroundTint="@color/blue_eight"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:onClick="@{() -> loginFragment.login()}"
+                    android:text="@string/btn_login"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="35dp"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLupaPassword" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvLoginDengan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingHorizontal="30dp"
+                    android:text="@string/tv_login_dengan"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivGoogle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/google_content"
+                    android:onClick="@{ () -> loginFragment.googleSignIn() }"
+                    android:src="@drawable/ic_google" />
+
+                <ImageView
+                    android:id="@+id/ivX"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/x_content"
+                    android:onClick="@{ () -> loginFragment.twitterSignIn() }"
+                    android:src="@drawable/logo_x" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvBelumPunyaAkun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/tv_belum_punya_akun"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDaftar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:onClick="@{ () -> loginFragment.toSignup()}"
+                    android:text="@string/text_daftar"
+                    android:textColor="@color/cyan_color"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

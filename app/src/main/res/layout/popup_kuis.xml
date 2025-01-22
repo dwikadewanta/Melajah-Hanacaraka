@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:background="@drawable/background1"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/icon_close_content"
+        android:src="@drawable/ic_close"
+        android:id="@+id/ivClose"
+        android:layout_gravity="end"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_selamat"
+        android:textSize="45sp"
+        android:fontFamily="@font/robotoslab_extrabold"
+        android:textColor="@color/green_color"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_nilai"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:textSize="30sp"
+        android:id="@+id/tvValue"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

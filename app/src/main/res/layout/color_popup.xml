@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/btnColorBlack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/color_black_content"
+        android:src="@drawable/popup_black_color"
+        app:layout_constraintBottom_toTopOf="@+id/btnColorCyan"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorRed"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnColorRed"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/btnColorBlack"
+        android:contentDescription="@string/color_red_content"
+        android:src="@drawable/popup_red_color"
+        app:layout_constraintBottom_toTopOf="@+id/btnColorPink"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorGreen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorBlack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnColorGreen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/btnColorRed"
+        android:contentDescription="@string/color_green_content"
+        android:src="@drawable/popup_green_color"
+        app:layout_constraintBottom_toTopOf="@+id/btnColorPurple"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorBlue"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorRed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnColorBlue"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/btnColorGreen"
+        android:contentDescription="@string/color_blue_content"
+        android:src="@drawable/popup_blue_color"
+        app:layout_constraintBottom_toTopOf="@+id/btnColorBrown"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorOrange"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorGreen"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnColorOrange"
+        android:layout_width="50dp"
+        android:layout_height="54dp"
+        android:layout_below="@id/btnColorBlack"
+        android:contentDescription="@string/color_orange_content"
+        android:src="@drawable/popup_orange_color"
+        app:layout_constraintBottom_toTopOf="@+id/btnColorCream"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorYellow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorBlue"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnColorYellow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnColorBlack"
+        android:layout_toEndOf="@id/btnColorOrange"
+        android:contentDescription="@string/color_yellow_content"
+        android:src="@drawable/popup_yellow_color"
+        app:layout_constraintBottom_toTopOf="@+id/btnColorDarkGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorOrange"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnColorPurple"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnColorBlack"
+        android:layout_toEndOf="@id/btnColorYellow"
+        android:contentDescription="@string/color_purple_content"
+        android:src="@drawable/popup_purple_color"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorBrown"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorPink"
+        app:layout_constraintTop_toBottomOf="@+id/btnColorGreen" />
+
+    <ImageView
+        android:id="@+id/btnColorPink"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnColorBlack"
+        android:layout_toEndOf="@id/btnColorPurple"
+        android:contentDescription="@string/color_pink_content"
+        android:src="@drawable/popup_pink_color"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorPurple"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorCyan"
+        app:layout_constraintTop_toBottomOf="@+id/btnColorRed" />
+
+    <ImageView
+        android:id="@+id/btnColorCyan"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnColorOrange"
+        android:contentDescription="@string/color_cyan_content"
+        android:src="@drawable/popup_cyan_color"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorPink"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnColorBlack" />
+
+    <ImageView
+        android:id="@+id/btnColorBrown"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnColorOrange"
+        android:layout_toEndOf="@id/btnColorCyan"
+        android:contentDescription="@string/color_brown_content"
+        android:src="@drawable/popup_brown_color"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorCream"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorPurple"
+        app:layout_constraintTop_toBottomOf="@+id/btnColorBlue" />
+
+    <ImageView
+        android:id="@+id/btnColorCream"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnColorOrange"
+        android:layout_toEndOf="@id/btnColorBrown"
+        android:contentDescription="@string/color_cream_content"
+        android:src="@drawable/popup_cream_color"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnColorDarkGreen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorBrown"
+        app:layout_constraintTop_toBottomOf="@+id/btnColorOrange" />
+
+    <ImageView
+        android:id="@+id/btnColorDarkGreen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnColorOrange"
+        android:layout_toEndOf="@id/btnColorCream"
+        android:contentDescription="@string/color_dark_green_content"
+        android:src="@drawable/popup_dark_green_color"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnColorCream"
+        app:layout_constraintTop_toBottomOf="@+id/btnColorYellow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

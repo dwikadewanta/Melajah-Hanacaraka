@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.KuisActivity">
+
+    <data>
+
+        <variable
+            name="kuisActivity"
+            type="com.example.capstoneproject.activity.KuisActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background1">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_back"
+            android:contentDescription="@string/icon_back_content"
+            android:onClick="@{() -> kuisActivity.btnBack()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivHanacaraka"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/hanacaraka_image"
+            android:src="@drawable/daftar_ha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPrevHanacaraka"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="18dp"
+            android:contentDescription="@string/icon_backward"
+            android:onClick="@{() -> kuisActivity.btnPrev()}"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@id/ivHanacaraka"
+            app:layout_constraintEnd_toStartOf="@+id/ivHanacaraka"
+            app:layout_constraintTop_toTopOf="@id/ivHanacaraka" />
+
+        <ImageView
+            android:id="@+id/ivNextHanacaraka"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="9dp"
+            android:contentDescription="@string/icon_forward"
+            android:onClick="@{() -> kuisActivity.btnNext()}"
+            android:rotationY="180"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="@id/ivHanacaraka"
+            app:layout_constraintStart_toEndOf="@+id/ivHanacaraka"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llTools"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/tools_background"
+            android:backgroundTint="@color/blue_eight"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/flDrawingView"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="@+id/flDrawingView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/btnBrush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_paintbrush"
+                    android:contentDescription="@string/icon_brush_content"
+                    android:onClick="@{() -> kuisActivity.btnBrush()}"
+                    app:layout_constraintBottom_toTopOf="@id/btnClear"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/btn_polygon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_polygon"
+                    android:contentDescription="@string/icon_polygon_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnBrush"
+                    app:layout_constraintStart_toEndOf="@+id/btnBrush" />
+
+                <ImageView
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_cancel"
+                    android:contentDescription="@string/icon_clear_content"
+                    android:onClick="@{() -> kuisActivity.btnClear()}"
+                    app:layout_constraintBottom_toTopOf="@id/btnUndo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnBrush" />
+
+                <ImageView
+                    android:id="@+id/btnUndo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_undo"
+                    android:contentDescription="@string/icon_undo_content"
+                    android:onClick="@{() -> kuisActivity.btnUndo()}"
+                    app:layout_constraintBottom_toTopOf="@+id/btnRedo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnClear" />
+
+                <ImageView
+                    android:id="@+id/btnRedo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_redo"
+                    android:contentDescription="@string/icon_redo_content"
+                    android:onClick="@{() -> kuisActivity.btnRedo()}"
+                    app:layout_constraintBottom_toTopOf="@+id/btnColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnUndo" />
+
+                <ImageView
+                    android:id="@+id/btnColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_color_palette"
+                    android:contentDescription="@string/icon_pallete_content"
+                    android:onClick="@{() -> kuisActivity.btnColor()}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRedo" />
+
+                <ImageView
+                    android:id="@+id/btn_polygon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_tools_polygon"
+                    android:contentDescription="@string/icon_polygon_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnColor"
+                    app:layout_constraintStart_toEndOf="@+id/btnColor" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flDrawingView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnKumpulKuis"
+            app:layout_constraintStart_toEndOf="@id/llTools"
+            app:layout_constraintTop_toBottomOf="@+id/ivHanacaraka">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/drawingViewFragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout="@layout/kuis_number_one_fragment" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnKumpulKuis"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/btn_menu_round"
+            android:backgroundTint="@color/blue_eight"
+            android:elevation="20dp"
+            android:onClick="@{() -> kuisActivity.btnKumpulKuis()}"
+            android:text="@string/kumpul_kuis"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/flDrawingView"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="5dp"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/flDrawingView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/flDrawingView" />
+
+        <LinearLayout
+            android:id="@+id/llNoSoal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tools_background"
+            android:backgroundTint="@color/blue_secondary"
+            android:elevation="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/btnKumpulKuis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/btnKumpulKuis"
+            app:layout_constraintTop_toTopOf="@id/flDrawingView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <Button
+                    android:id="@+id/btnOne"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberOne()}"
+                    android:text="@string/number_1"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnThree"
+                    app:layout_constraintEnd_toStartOf="@id/btnTwo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnTwo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberTwo()}"
+                    android:text="@string/number_2"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnFour"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnOne"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnThree"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberThree()}"
+                    android:text="@string/number_3"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnFive"
+                    app:layout_constraintEnd_toStartOf="@id/btnFour"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnOne" />
+
+                <Button
+                    android:id="@+id/btnFour"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberFour()}"
+                    android:text="@string/number_4"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnSix"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnThree"
+                    app:layout_constraintTop_toBottomOf="@+id/btnTwo" />
+
+                <Button
+                    android:id="@+id/btnFive"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberFive()}"
+                    android:text="@string/number_5"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnSeven"
+                    app:layout_constraintEnd_toStartOf="@id/btnSix"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnThree" />
+
+                <Button
+                    android:id="@+id/btnSix"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberSix()}"
+                    android:text="@string/number_6"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnEight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnFive"
+                    app:layout_constraintTop_toBottomOf="@+id/btnFour" />
+
+                <Button
+                    android:id="@+id/btnSeven"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberSeven()}"
+                    android:text="@string/number_7"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnNine"
+                    app:layout_constraintEnd_toStartOf="@id/btnEight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnFive" />
+
+                <Button
+                    android:id="@+id/btnEight"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberEight()}"
+                    android:text="@string/number_8"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnTen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnSeven"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSix" />
+
+                <Button
+                    android:id="@+id/btnNine"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberNine()}"
+                    android:text="@string/number_9"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnTen"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnSeven" />
+
+                <Button
+                    android:id="@+id/btnTen"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/kuis_btn_number"
+                    android:onClick="@{() -> kuisActivity.btnNumberTen()}"
+                    android:text="@string/number_10"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnNine"
+                    app:layout_constraintTop_toBottomOf="@+id/btnEight" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTime"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/tools_background"
+            android:backgroundTint="@color/green_color"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/llNoSoal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/llNoSoal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvTimerMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_minutes"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvTimerSeconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_seconds"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

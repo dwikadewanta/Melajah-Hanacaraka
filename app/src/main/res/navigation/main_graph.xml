@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.capstoneproject.fragment.MenuFragment"
+        android:label="MenuFragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_gantiUsernameFragment"
+            app:destination="@id/gantiUsernameFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:popExitAnim="@anim/enter_from_left"/>
+        <action
+            android:id="@+id/action_menuFragment_to_daftarHanacarakaFragment"
+            app:destination="@id/daftarHanacarakaFragment"
+            app:popExitAnim="@anim/enter_from_left"/>
+        <action
+            android:id="@+id/action_menuFragment_to_statistikFragment"
+            app:destination="@id/statistikFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:popExitAnim="@anim/enter_from_left"/>
+        <action
+            android:id="@+id/action_menuFragment_to_pelajaranFragment"
+            app:destination="@id/pelajaranFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gantiUsernameFragment"
+        android:name="com.example.capstoneproject.fragment.GantiUsernameFragment"
+        android:label="GantiUsernameFragment" />
+    <fragment
+        android:id="@+id/daftarHanacarakaFragment"
+        android:name="com.example.capstoneproject.fragment.DaftarHanacarakaFragment"
+        android:label="DaftarHanacarakaFragment" >
+        <action
+            android:id="@+id/action_daftarHanacarakaFragment_to_kamusFragment"
+            app:destination="@id/kamusFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/enter_from_left"/>
+        <argument
+            android:name="isKamus"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/statistikFragment"
+        android:name="com.example.capstoneproject.fragment.StatistikFragment"
+        android:label="StatistikFragment" />
+    <fragment
+        android:id="@+id/kamusFragment"
+        android:name="com.example.capstoneproject.fragment.KamusFragment"
+        android:label="KamusFragment" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/pelajaranFragment"
+        android:name="com.example.capstoneproject.fragment.PelajaranFragment"
+        android:label="PelajaranFragment" />
+</navigation>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/flText"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:background="@drawable/item_image_text_round"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/flImage"
+        app:layout_constraintEnd_toEndOf="@id/flImage">
+
+        <TextView
+            android:id="@+id/tvItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/item_image_image_round"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/hanacaraka_image"
+            android:scaleType="fitCenter"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flImage"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

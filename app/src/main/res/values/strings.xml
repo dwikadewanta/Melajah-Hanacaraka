@@ -1,0 +1,194 @@
+<resources>
+    <string name="app_name">Melajah Hanacaraka</string>
+
+    //menu
+    <string name="ganti_username">Ganti username</string>
+    <string name="ganti_password">Ganti password</string>
+    <string name="logout">Logout</string>
+
+    //Layout strings
+
+    // splash screen
+    <string name="logo_content">logo</string>
+    <string name="melajah">Melajah</string>
+    <string name="hanacaraka">Hanacaraka</string>
+
+    //login_fragment and signup_fragment
+    <string name="tv_title">Selamat Datang Kembali</string>
+    <string name="tv_username_or_email">Username/Email</string>
+    <string name="tv_password">Password</string>
+    <string name="tv_password_rule">Password setidaknya 6 karakter</string>
+    <string name="tv_lupa_password">Lupa Password?</string>
+    <string name="btn_register">Register</string>
+    <string name="tv_login_dengan">login dengan</string>
+    <string name="tv_belum_punya_akun">Belum punya akun? </string>
+    <string name="tv_signup_title">Ayo Mulai Sekarang!</string>
+    <string name="tv_username">Username</string>
+    <string name="tv_email">Email</string>
+    <string name="btn_login">Login</string>
+    <string name="text_daftar">\ daftar</string>
+    <string name="tv_sudah_punya_akun">Sudah punya akun?</string>
+    <string name="google_content">google login</string>
+    <string name="x_content">X login</string>
+
+    //lupa_password_fragment
+    <string name="tv_title_lupa_password">Lupa Password?</string>
+    <string name="tv_deskripsi">Masukkan email yang terhubung dengan akun</string>
+    <string name="btn_kirim">Kirim</string>
+    <string name="tv_ingat_password">Ingat password?</string>
+    <string name="tv_masuk">masuk</string>
+    <string name="icon_back_content">back</string>
+
+    //menu_fragment
+    <string name="tv_title_menu1">Mari Mengenal</string>
+    <string name="tv_title_menu2">Hanacaraka Bali</string>
+    <string name="btn_kamus">Kamus</string>
+    <string name="btn_pelajaran">Pelajaran</string>
+    <string name="btn_menulis">Latihan Menulis</string>
+    <string name="btn_kuis">Kuis</string>
+    <string name="btn_statistik">Statistik</string>
+
+    //ganti_username_fragment
+    <string name="tv_title_ganti_username">Buat Username Baru</string>
+    <string name="tv_deskripsi_ganti_username">Masukkan username yang baru</string>
+    <string name="et_username">Username baru</string>
+    <string name="btn_ganti">Ganti</string>
+
+    //daftar_hanacaraka_fragment
+    <string name="tv_title_daftar">Pilih Huruf Hanacaraka</string>
+
+    // kamus
+    <string name="hanacaraka_image">hanacaraka</string>
+    <string name="icon_sound_content">icon sound</string>
+
+    // menulis_fragment
+    <string name="icon_brush_content">icon brush</string>
+    <string name="icon_polygon_content">icon polygon</string>
+    <string name="icon_clear_content">icon clear</string>
+    <string name="icon_undo_content">icon undo</string>
+    <string name="icon_redo_content">icon redo</string>
+    <string name="icon_pallete_content">icon palette</string>
+    <string name="cek_aksara">Cek Aksara</string>
+    <string name="tingkat_kemiripan">Tingkat Kemiripan:</string>
+
+    // kuis_fragment
+    <string name="icon_backward">icon backward</string>
+    <string name="icon_forward">icon backward</string>
+    <string name="kumpul_kuis">Kumpul Kuis</string>
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_7">7</string>
+    <string name="number_8">8</string>
+    <string name="number_9">9</string>
+    <string name="number_10">10</string>
+    <string name="timer_minutes">0 :\ </string>
+    <string name="timer_seconds">00</string>
+
+    // statistik_fragment
+    <string name="perkembangan_latihan">Perkembangan Latihan Menulis</string>
+    <string name="huruf_benar">Huruf Benar</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="data_kuis">Data Kuis</string>
+    <string name="kuis_tertinggi">Kuis Tertinggi</string>
+    <string name="test_1">test 1</string>
+    <string name="test_2">test 2</string>
+    <string name="test_3">test 3</string>
+    <string name="test_4">test 4</string>
+    <string name="test_5">test 5</string>
+    <string name="test_6">test 6</string>
+    <string name="data_latihan">Data Latihan</string>
+    <string name="tanpa_pengangge">Tanpa pengangge</string>
+    <string name="pengangge_ulu">Pengangge ulu</string>
+    <string name="pengangge_suku">Pengangge suku</string>
+    <string name="pengangge_taleng">Pengangge taleng</string>
+    <string name="pengangge_taleng_tedong">Pengangge taleng tedong</string>
+    <string name="pengangge_pepet">Pengangge pepet</string>
+
+    //animation_popup
+    <string name="icon_close_content">icon close</string>
+
+    //color_popup
+    <string name="color_black_content">color black</string>
+    <string name="color_red_content">color red</string>
+    <string name="color_green_content">color green</string>
+    <string name="color_blue_content">color blue</string>
+    <string name="color_orange_content">color orange</string>
+    <string name="color_yellow_content">color yellow</string>
+    <string name="color_purple_content">color purple</string>
+    <string name="color_pink_content">color pink</string>
+    <string name="color_cyan_content">color cyan</string>
+    <string name="color_brown_content">color brown</string>
+    <string name="color_cream_content">color cream</string>
+    <string name="color_dark_green_content">color dark green</string>
+
+    //custom_toast
+    <string name="icon_correct_content">icon correct</string>
+    <string name="icon_wrong_content">icon wrong</string>
+
+    //popup
+    <string name="tv_selamat">SELAMAT</string>
+    <string name="tv_nilai">Nilai Kamu :</string>
+    <string name="tv_siap">Apakah sudah siap?</string>
+    <string name="tv_mulai">Mulai</string>
+    <string name="tv_kembali">KEMBALI</string>
+
+    //statistik_rv_item
+    <string name="tv_rv_item">- \</string>
+
+    //drawer
+    <string name="profile_content">profile content</string>
+    <string name="icon_picture_content">picture content</string>
+
+    //Description
+    <string name="desc_one">Grow your Business By Accepting Card Payments with The New Card Reader</string>
+    <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</string>
+
+    <string name="default_web_client_id">339510665543-epk6q1a5bsh415h8cdtc85gr4g6po3vv.apps.googleusercontent.com</string>
+
+
+    <string name="facebook_app_id">1404374223549557</string>
+    <string name="fb_login_protocol_scheme">https://capstone-authentication-42de5.firebaseapp.com/__/auth/handler</string>
+    <string name="facebook_client_token">cb9e25ae221c47a578d07d3ad0647ded</string>
+
+    <string name="navigation_drawer_open">Open Navigation</string>
+    <string name="navigation_drawer_close">Close Navigation</string>
+
+    <string name="tv_pelajaran1_1">Asal usul aksara Bali tidak dapat dilepaskan dari perkembangan aksara di negara India
+        dikarenakan agama Hindu dan agama Buddha serta bahasa dengan aksaranya sampai bersama-sama ke Indonesia dan Bali.
+        Dalam kebudayaan India dikenal adanya aksara tertua yang disebut aksara Karosthi
+        yang kemudian berkembang menjadi aksara Brahmi. Aksara ini kemudian berkembang menjadi aksara Dewanagari dan aksara Pallawa.</string>
+    <string name="tv_pelajaran1_2">Aksara Dewanagari dan aksara Pallawa dibentuk kembali disesuaikan dengan rasa pekerti bangsa Indonesia,
+        dijadikan suatu pola dan lambat laun berkembang dengan daya kreasi bangsa Indonesia yaitu dapat disebut aksara Indonesia kuno (aksara Kawi).
+        Selanjutnya dari aksara Kawi mengalami perkembangan menjadi aksara Bali dan aksara Jawa.
+        Dalam menuliskan bahasa Bali, aksara yang digunakan berjumlah 18 aksara atau hanacaraka Bali.
+        Namun akibat pengaruh kebudayaan India dan agama hindunya serta bahasa Sansekerta maka seluruh aksara nya berjumlah 47 buah aksara. (Suasta et al., 1997)</string>
+
+    <string name="tv_pelajaran2_1">Masyarakat Bali memiliki bahasa sendiri yaitu bahasa Bali dan mewarisi wujud kebudayaan Bali.
+        Hal ini menunjukkan peranan bahasa Bali dalam mengemban tugas kemasyarakatan dan tugas budayanya yang sangat khas.
+        Peranan ditunjukkan melalui dua aspek bentuk yaitu bentuk verbal dan non-verbal. Bentuk verbal meliputi bahasa lisan dan bahasa tulis. Bahasa tulis meliputi bahasa Bali yang ditulis dengan aksara Latin dan bahasa Bali yang ditulis dengan aksara Bali.
+        Bahasa Bali dalam kelangsungannya dari masa kemasa dapat diketahui melalui aksaranya yang digunakan untuk menuliskan bahasa Bali.
+        Dengan demikian aksara Bali merupakan alat pendokumentasian bahasa Bali. Aksara Bali memiliki peranan yang sangat penting dalam menjaga keutuhan bahasa Bali pada masa berikutnya.
+        Berdasarkan latar belakang sejarahnya, aksara dan bahasa Bali telah memasuki kehidupan penuturnya sebelum adanya aksara Latin.
+        Hal ini dapat dibuktikan dalam berbagai prasasti kuno yang bertuliskan aksara dan bahasa Bali Kuno. Adapun Bidang-bidang yang menyangkut tradisi memiliki kecenderungan dituangkan dalam aksara dan bahasa Bali.
+        Sedangkan masalah-masalah kekinian dituangkan melalui aksara Latin dengan bahasa Indonesia maupun bahasa asing.</string>
+    <string name="tv_pelajaran2_2">Menurut I Wayan Simpen AB, aksara yang digunakan untuk menuliskan bahasa Bali lumbrah adalah aksara Wreastra yaitu aksara yang jumlahnya 18.
+        Bahasa Bali lumbrah adalah bahasa Bali yang digunakan dalam kehidupan sehari-hari.
+        Sedangkan menurut bapak Prof Dr I Gusti Ngurah Bagus, mengatakan bahwa aksara yang digunakan untuk menulis bahasa Bali adalah aksara biasa yang meliputi aksara Wreastra dan aksara Swalalita. (Suasta et al., 1997)</string>
+
+    <string name="tv_pelajaran3_1">Peranan aksara Bali dalam bidang keagamaan merupakan tata penggunaan aksara Bali dalam kehidupan keagamaan Hindu yang diekspresikan dalam upacara agama yang disebut Panca Yadnya, yaitu Dewa Yadnya, Pitra Yadnya, Rsi Yadnya, Manusa Yadnya, dan Bhuta Yadnya.</string>
+    <string name="tv_pelajaran3_2">Penggunaan aksara Bali dalam upacara Dewa Yadnya ditemukan antara lain alas banten/upakara dewa-dewi yang menggunakan tempeh atau niru, yang diisi gambar lukisan Padma Asta Dala dengan rerajahan Dasaksara. sebagai simbul Dewata Nawa Sanga atau alam semesta.
+        Di samping itu penggunaan aksara Bali juga ditemukan dalam pendirian bangunan suci seperti sanggah pemerajan. maupun parahyangan.</string>
+    <string name="tv_pelajaran3_3">Penggunaan aksara Bali dalam upacara Pitra Yadnya. Khususnya pengabenan sangat banyak. terutama dalam rerajahan aksara Bali pada kajang. Kajang adalah perlrngkapan upacara ngaben yang dibuat dcngan selembar kain putih yang berisi rerajahan aksara Bali.</string>
+    <string name="tv_pelajaran3_4">Dalam upacara Rsi Yadnya pcnggunaan aksara Bali ditemukan antara lain pada upacara pawintenan dan padiksan yang menggunakan aksara WiJaksara yaitu Desaksara yang dirajah pada bunga teratai putih.
+        Bunga teratai putih yang telah dirajah ini digunakan untuk masalah Wijaksara dan aksara Modre lainnya pada orang yang mawinten atau madiksa</string>
+    <string name="tv_pelajaran3_5">Adapun penggunaan aksara Bali dalam upacara Manusa Yadnya ditemukan antara lain pada saat bayi baru lahir dilakukan upacara penanaman ari-ari.
+        Demikian juga pada upacara tiga bulan ada upacara turun tanah ditemukan penggunaan rerajahan pada gambar lukisan Bedawangnala. yang berisi Padma Asta Dala dengan rerajahan Dasaksara, yang dalam pelaksanaan upacaranya kaki bayi diinjak-injakkan pada lukisan tersebut scbagai pertanda mulai saat itu bayi boleh menginjak tanah.</string>
+    <string name="tv_pelajaran4_5">Adapun penggunaan aksara Bali dalam pelaksaaaan Bhuta Yadnya ditemukan antara lain pada upacara pacaruan Resi Gana. pada upacara ini digunakan saran daun pohon nagasari sembilan lembar yang setiap Iembar berisi rerajahan sesuai dengan tcmpatnya pada arah mata angin.</string>
+
+</resources>
